@@ -4,14 +4,7 @@ const variables = require('./variables');
 const ip = require('ip');
 const escpos = require('escpos');
 
-const venta = path.join('/home/pi/mirariapp-printer/img/'+variables.organizationCode+'/', 'logo.png');
-const bocadillos = path.join('/home/pi/mirariapp-printer/img/'+variables.organizationCode+'/', 'bocadillos.png');
-const cenas = path.join('/home/pi/mirariapp-printer/img/'+variables.organizationCode+'/', 'cenas.png');
-const comida = path.join('/home/pi/mirariapp-printer/img/'+variables.organizationCode+'/', 'comida.png');
-const horneado = path.join('/home/pi/mirariapp-printer/img/'+variables.organizationCode+'/', 'horneado.png');
-const pan = path.join('/home/pi/mirariapp-printer/img/'+variables.organizationCode+'/', 'pan.png');
-
-let logo = path.join('/home/pi/mirariapp-printer/img/'+variables.organizationCode+'/', 'logo.png');
+let logo = path.join('/home/pi/printer/logo.png');
 
 var PublicSocket = require('socket.io-client')('http://50.18.229.242:8002');
 PublicSocket.emit('room', variables.organizationCode);
@@ -35,26 +28,6 @@ io.on('connection', function (privateSocket) {
         if (event == 'Print') {
             logo = venta
         }
-        //if (event == 'PrintBocadillos') {
-            //logo = bocadillos
-            //event = 'Print'
-        //}
-        //if (event == 'PrintCenas') {
-            //logo = cenas
-            //event = 'Print'
-        //}
-        //if (event == 'PrintComida') {
-            //logo = comida
-            //event = 'Print'
-        //}
-        //if (event == 'PrintHorneado') {
-            //logo = horneado
-            //event = 'Print'
-        //}
-        //if (event == 'PrintPan') {
-            //logo = pan
-            //event = 'Print'
-        //}
         if (event == 'Print'){
             (async () => {
                 var times = 1
@@ -78,11 +51,6 @@ io.on('connection', function (privateSocket) {
                                     });
                                 }
                                 if (t[0] == 'cut'){
-                                    //if (logo != venta){
-                                        //if (times == 1) printer.text('COMPROBANTE', '857')
-                                        //if (times == 2) printer.text('ORDEN DE PRODUCCION', '857')
-                                        //if (times == 3) printer.text('TICKET DE CAJA', '857')
-                                    //}
                                     printer.text('', '857')
                                     printer.cut()
                                     printer.flush()
