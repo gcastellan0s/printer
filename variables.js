@@ -17,7 +17,7 @@
 //exports.model = 'BIXOLON'
 
 //exports.organizationCode = "tahona"
-//exports.sellpoint = "SUSY PANADERIA"
+//exports.sellpoint = "SUSY PEDIDOS"
 //exports.port = "8087"
 //exports.isServer = false
 //exports.model = 'EPSON'
@@ -28,11 +28,11 @@
 //exports.isServer = false
 //exports.model = 'BIXOLON'
 
-//exports.organizationCode = "tna"
-//exports.sellpoint = "CAMINO PEDIDOS"
-//exports.port = "8081"
-//exports.isServer = false
-//exports.model = 'EPSON'
+// exports.organizationCode = "tna"
+// exports.sellpoint = "CAMINO PEDIDOS"
+// exports.port = "8081"
+// exports.isServer = false
+// exports.model = 'EPSON'
 
 exports.organizationCode = "CBDA"
 exports.sellpoint = "LA CEBADA"
