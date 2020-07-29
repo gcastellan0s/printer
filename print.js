@@ -25,6 +25,7 @@ setInterval(function () {
 var io = require('socket.io')(variables.port);
 io.on('connection', function (privateSocket) {
     privateSocket.on('Send_Event', function (organizationCode, event, data) {
+        console.log(event, data)
         if (event == 'Print') {
             (async () => {
                 var times = 1
