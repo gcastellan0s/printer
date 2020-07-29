@@ -25,7 +25,6 @@ setInterval(function () {
 var io = require('socket.io')(variables.port);
 io.on('connection', function (privateSocket) {
     privateSocket.on('Send_Event', function (organizationCode, event, data) {
-        console.log(event, data)
         if (event == 'Print') {
             (async () => {
                 var times = 1
@@ -33,6 +32,7 @@ io.on('connection', function (privateSocket) {
                     const device = new escpos.USB();
                     const printer = new escpos.Printer(device);
                     escpos.Image.load(logo, function (image) {
+                        console.log(data)
                         device.open(function (err) {
                             data.forEach(t => {
                                 if (t[0] == 'set') {
