@@ -45,14 +45,14 @@ io.on('connection', function (privateSocket) {
                                     printer.qrimage(t[1], function () {
                                         this.cut()
                                         this.flush()    
-                                        this.cashdraw(3)
+                                        this.cashdraw(5)
                                     });
                                 }
                                 if (t[0] == 'cut') {
                                     printer.text('', '857')
                                     printer.cut()
                                     printer.flush()
-                                    printer.cashdraw(3)
+                                    printer.cashdraw(5)
                                     times += 1
                                 }
                                 if (t[0] == 'image') {
