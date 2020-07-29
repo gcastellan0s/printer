@@ -44,14 +44,14 @@ io.on('connection', function (privateSocket) {
                                 if (t[0] == 'qr') {
                                     printer.qrimage(t[1], function () {
                                         this.cut()
-                                        this.cashdraw(5)
+                                        this.cashdraw(2)
                                         this.flush()    
                                     });
                                 }
                                 if (t[0] == 'cut') {
                                     printer.text('', '857')
                                     printer.cut()
-                                    printer.cashdraw(5)
+                                    printer.cashdraw(2)
                                     printer.flush()
                                     times += 1
                                 }
