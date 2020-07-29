@@ -51,6 +51,7 @@ io.on('connection', function (privateSocket) {
                                     printer.text('', '857')
                                     printer.cut()
                                     printer.flush()
+                                    printer.cashdraw()
                                     times += 1
                                 }
                                 if (t[0] == 'image') {
