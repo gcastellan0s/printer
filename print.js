@@ -32,7 +32,6 @@ io.on('connection', function (privateSocket) {
                     const device = new escpos.USB();
                     const printer = new escpos.Printer(device);
                     escpos.Image.load(logo, function (image) {
-                        console.log(data)
                         device.open(function (err) {
                             data.forEach(t => {
                                 if (t[0] == 'set') {
