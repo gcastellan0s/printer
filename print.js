@@ -4,7 +4,7 @@ const variables = require('./variables');
 const ip = require('ip');
 const escpos = require('escpos');
 
-let logo = path.join('logos/cebada.png');
+let logo = path.join('/home/pi/printer/logos/cebada.png');
 
 var PublicSocket = require('socket.io-client')('http://50.18.229.242:8002');
 PublicSocket.emit('room', variables.organizationCode);
