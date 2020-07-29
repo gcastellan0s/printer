@@ -43,16 +43,16 @@ io.on('connection', function (privateSocket) {
                                 if (t[0] == 'text') printer.text(t[1], '857')
                                 if (t[0] == 'qr') {
                                     printer.qrimage(t[1], function () {
+                                        this.cashdraw(5)
                                         this.cut()
                                         this.flush()    
-                                        this.cashdraw(5)
                                     });
                                 }
                                 if (t[0] == 'cut') {
+                                    printer.cashdraw(5)
                                     printer.text('', '857')
                                     printer.cut()
                                     printer.flush()
-                                    printer.cashdraw(5)
                                     times += 1
                                 }
                                 if (t[0] == 'image') {
