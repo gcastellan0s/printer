@@ -46,15 +46,13 @@ io.on('connection', function (privateSocket) {
                                         this.cut()
                                         this.flush()    
                                         this.cashdraw()
-                                        console.log('2')
                                     });
                                 }
                                 if (t[0] == 'cut') {
                                     printer.text('', '857')
                                     printer.cut()
                                     printer.flush()
-                                    printer.cashdraw()
-                                    console.log('1')
+                                    printer.cashdraw(1)
                                     times += 1
                                 }
                                 if (t[0] == 'image') {
