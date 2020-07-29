@@ -44,7 +44,9 @@ io.on('connection', function (privateSocket) {
                                 if (t[0] == 'qr') {
                                     printer.qrimage(t[1], function () {
                                         this.cut()
-                                        this.flush()
+                                        this.flush()    
+                                        this.cashdraw()
+                                        console.log('2')
                                     });
                                 }
                                 if (t[0] == 'cut') {
@@ -52,6 +54,7 @@ io.on('connection', function (privateSocket) {
                                     printer.cut()
                                     printer.flush()
                                     printer.cashdraw()
+                                    console.log('1')
                                     times += 1
                                 }
                                 if (t[0] == 'image') {
