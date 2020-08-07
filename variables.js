@@ -28,14 +28,14 @@
 //exports.isServer = false
 //exports.model = 'BIXOLON'
 
-// exports.organizationCode = "tna"
-// exports.sellpoint = "CAMINO PEDIDOS"
-// exports.port = "8081"
-// exports.isServer = false
-// exports.model = 'EPSON'
-
-exports.organizationCode = "CBDA"
-exports.sellpoint = "LA CEBADA"
+exports.organizationCode = "tna"
+exports.sellpoint = "CAMINO PANADERIA"
 exports.port = "8081"
 exports.isServer = false
 exports.model = 'EPSON'
+
+// exports.organizationCode = "CBDA"
+// exports.sellpoint = "LA CEBADA"
+// exports.port = "8081"
+// exports.isServer = false
+// exports.model = 'EPSON'
