@@ -3,16 +3,15 @@ ssh pi@raspberrypi.local
 
 
 sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo apt-get ubuntu-desktop -y && sudo apt-get install xfce4 xfce4-goodies -y && sudo apt-get install tightvncserver -y
-curl -sL https://deb.nodesource.com/setup_10.x | bash - && curl -L https://npmjs.org/install.sh | sudo sh
+wget -O - https://raw.githubusercontent.com/sdesalas/node-pi-zero/master/install-node-v10.15.0.sh | bash
 sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo apt-get install build-essential libudev-dev -y && sudo apt-get install build-essential -y
 
-sudo apt install npm -y
-sudo npm install -g npm
+sudo apt install git
 
-git clone https://github.com/gcastellan0s/mirariapp-printer.git
-cd mirariapp-printer
+git clone https://github.com/gcastellan0s/printer.git
+cd printer
 
-npm i escpos --save --unsafe-perm=true && npm i socket.io && npm i socket.io-client && npm i ip
+npm i escpos@2.5.2 --save --unsafe-perm=true && npm i socket.io && npm i socket.io-client && npm i ip
 
 sudo aptitude install supervisor -y
 sudo cp printer.conf /etc/supervisor/conf.d/printer.conf
